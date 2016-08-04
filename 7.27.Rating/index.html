@@ -1,0 +1,102 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>_7.27.Rating</title>
+    <link href="lib/winjs-4.0.1/css/ui-light.css" rel="stylesheet" />
+    <script src="lib/winjs-4.0.1/js/base.js"></script>
+    <script src="lib/winjs-4.0.1/js/ui.js"></script>
+    <link href="css/default.css" rel="stylesheet" />
+    <script src="js/main.js"></script>
+</head>
+<body class="win-type-body">
+    <table>
+        <tr>
+            <!-- Average Rating has float-point precision. Here also shows how to listen to value changes. -->
+            <td class="label">
+                Average rating
+                <div class="detail">
+                    averageRating: 3.4
+                </div>
+            </td>
+            <td class="control">
+                <div data-win-control="WinJS.UI.Rating" data-win-options="{averageRating: 3.4, onchange: basics.changeRating}"></div>
+            </td>
+        </tr>
+
+        <tr>
+            <!--user rating should be an integer -->
+            <td class="label">
+                User rating
+                <div class="detail">
+                    averageRating: 3.4, userRating: 4
+                </div>
+            </td>
+            <td class="control">
+                <div data-win-control="WinJS.UI.Rating" data-win-options="{averageRating: 3.4, userRating: 4, onchange: basics.changeRating}">
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <!--disabled rating -->
+            <td class="label">
+                Disabled
+                <div class="detail">
+                    averageRating: 3.4, disabled: true
+                </div>
+            </td>
+            <td class="control">
+                <div data-win-control="WinJS.UI.Rating" data-win-options="{averageRating: 3.4, disabled :true}">
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <!--customized tooltips with rating control-->
+            <td class="label">
+                Customized tooltip
+                <div class="detail">
+                    tooltipStrings:['Horrible','Poor','Fair','Good','Excellent','Delete']
+                </div>
+            </td>
+            <td class="control">
+                <div data-win-control="WinJS.UI.Rating" data-win-options="{tooltipStrings:['Horrible','Poor','Fair','Good','Excellent','Delete']}"></div>
+            </td>
+        </tr>
+
+        <tr>
+            <!-- Number of stars in rating control-->
+            <td class="label">
+                Number of stars
+                <div class="detail">
+                    maxRating: 10
+                </div>
+            </td>
+            <td class="control">
+                <div data-win-control="WinJS.UI.Rating" data-win-options="{maxRating: 10, averageRating: 3.6}">
+                </div>
+            </td>
+        </tr>
+
+        <tr>
+            <!-- if you don't want to allow the users to delete their previous rating, you could disable the interaction for that by setting the enableClear option.
+            you can still prgrammatically clear the rating b setting userRating to 0.-->
+            <td class="label">
+                Disable the ability to clear rating
+                <div class="detail">
+                    enableClear: false
+                </div>
+            </td>
+            <td class="control">
+                <div data-win-control="WinJS.UI.Rating" data-win-options="{enableClear: false}">
+                </div>
+            </td>
+        </tr>
+    </table>
+
+    <div id="messageElement"></div>
+
+
+</body>
+</html>
